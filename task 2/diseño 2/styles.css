@@ -10,11 +10,7 @@
     height: 600px;
     z-index: 1;
 }
-.logo {
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
+
 .upcoming {
     border: 2px solid black;
     color: rgb(15, 14, 14);
@@ -45,12 +41,18 @@ nav ul li a {
 .active {
     background-color: green;
 }
-main {
-    display: flex;
-}
+
 main section {
     padding: 30px;
     margin-left: 50px;
+    display: inline-block;
+    max-width: 1600px;
+}
+
+.logo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
 }
 
 h1 {
