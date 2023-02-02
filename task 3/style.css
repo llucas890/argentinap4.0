@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #0f0f0f;
+}
+.imagen {
+    width: 500px;
+    
+}
+.container {
+    margin: 0 40px;
+}
+
+.principal {
+    background-color: #f0f0f0;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40vh;
+    max-width: 1100px;
+    min-width: 400px;
+    border-left: 2px solid dimgray ;
+    border-right: 2px solid dimgray;
+}
+h1 {
+    margin-bottom: 20px;
+}
+.menu {
+    display: flex;
+    background-color: rgb(160, 95, 95);
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 8vh;
+    list-style: none;
+}
+
+div>ul>li>a:hover {
+    background-color: rgb(27, 27, 27);
+    transition: 0.3s;
+    color: whitesmoke;
+    border-radius: 5px 5px;
+}
+
+.imagen:hover {
+    transition: 0.3s;
+    width: 100%;
+}
+
+.menu a:link, :visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+div>ul>li>a {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 80px;
+}
+
+.center {
+    text-align: center;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Montserrat, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Montserrat, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-aw21{border-color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
