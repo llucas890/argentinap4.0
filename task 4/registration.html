@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/Logo_Mighty_ducks-01.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Mighty Ducks Hockey League</title>
+</head>
+
+<body>
+    <div>
+        <ul class="menu">
+            <li><a href="index.html"><img src="images/Logo_Mighty_ducks-01.png" alt="logo" class="logo"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="aboutMDHL.html">About</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="game_info.html">Game Information</a></li>
+            <li><a href="registration.html">Registration</a></li>
+        </ul>
+    </div>
+    <div>
+        <main class="principal">
+            <div class="center">
+                <h1>Mighty Ducks Hockey League</h1>
+                <form action="showdata.html" method="GET">
+                    <fieldset>
+                        <legend align=center>Registration Form</legend>
+                        <div class="firstform">
+
+                            <p><label for="name">Player's First Name: </label>
+                                <input type="text" name="name" id="name">
+                            </p>
+
+                            <p><label for="lastname">Last Name: </label>
+                                <input type="text" name="lastname" id="lastname">
+                            </p>
+                            <p>
+                                <label for="street">Street Address: </label>
+                                <input type="text" name="street" id="street">
+                            </p>
+                            <p>
+                                <label for="city">City: </label>
+                                <input type="text" name="city" id="city">
+                            </p>
+                            <p>
+                                <label for="zip">Zip Code: </label>
+                                <input type="text" name="zip" id="zip">
+                            </p>
+                            <p>
+                                <label for="birthdate">Birth Date(mm/dd/yyyy): </label>
+                                <input type="text" name="birthdate" id="birthdate">
+                            </p>
+                            <p><label for="gender">Gender: </label>
+                                <span>Female
+                                    <input type="checkbox" name="gender" id="gender" value="Female"></span>
+                                <span>Male
+                                    <input type="checkbox" name="gender" id="gender" value="Male"></span>
+                            </p>
+                            <p><label for="grade">Grade: </label>
+                                <input type="checkbox" name="pre-school" id="grade">Pre-school</span>
+                                <input type="checkbox" name="1st" id="grade">1st</span>
+                                <input type="checkbox" name="2nd" id="grade">2nd</span>
+                                <input type="checkbox" name="3rd" id="grade">3rd</span>
+                                <input type="checkbox" name="4th" id="grade">4th</span>
+                                <input type="checkbox" name="5th" id="grade">5th</span>
+                            </p>
+                        </div>
+                        <div class="secondform">
+                            <p>Which elementary school do you live near?</p>
+                            <label for="closest">
+                                <p>Closest School: </p>
+                            </label>
+                            <input type="checkbox" name="Aj Katzenmaier" id="closest">Aj Katzenmaier</span>
+                            <input type="checkbox" name="Marjorie P Hart" id="closest">Marjorie P Hart</span>
+                            <input type="checkbox" name="Greenbay" id="closest">Greenbay</span>
+                            <input type="checkbox" name="North Elementary" id="closest">North Elementary</span>
+                            <input type="checkbox" name="Howard A Yeager" id="closest">Howard A Yeager</span>
+                            <input type="checkbox" name="South Elementary" id="closest">South Elementary</span>
+                        </div>
+                        <div class="thirdform">
+                            <label for="position">
+                                <p>What position(s) do you normally play? (check all that apply)</p>
+                            </label>
+                            <input type="checkbox" name="Forward" id="position">Forward</span>
+                            <input type="checkbox" name="Midfield" id="position">Midfield</span>
+                            <input type="checkbox" name="Defense" id="position">Defense</span>
+                            <input type="checkbox" name="Goalkeeper" id="position">Goalkeeper</span>
+
+                            <label for="uniform">
+                                <p>Uniform Size: </p>
+                            </label>
+                            <input type="checkbox" name="Youth Small" id="uniform">Youth Small</span>
+                            <input type="checkbox" name="Medium" id="uniform">Medium</span>
+                            <input type="checkbox" name="Youth Medium" id="uniform">Youth Medium</span>
+                            <input type="checkbox" name="Large" id="uniform">Large</span>
+                            <input type="checkbox" name="Youth Large" id="uniform">Youth Large</span>
+                            <input type="checkbox" name="Extra-Large" id="uniform">Extra-Large</span>
+                            <input type="checkbox" name="Small" id="uniform">Small</span>
+                        </div>
+                        <div class="fourthform">
+                            <p>Permission to Play</p>
+
+                            <p>I, the parent of guardian of the minor registrant, agree that the registrant and i will
+                                abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the
+                                possibility of physical injury associated with hocker and in consideration for the
+                                "League" accepting the registrant for its hockey programs and activities, I herevy
+                                release, discharge, and/or otherwise indemnify MDHL, their employees and associated
+                                personnel and volunteers, including the facilities used for practices and games, against
+                                any claim by or on behalf of the registrant as a result of the registrant's
+                                participation in the programand/orbeing transported to or from MDHL sponsored
+                                activities, which transportation.
+                            <p>By signing below, i here by agree and authorize the above. In addition, by signing below,
+                                also acknowledge that i have read the cancellation policy and agree to its terms.</p>
+                            </p>
+                            <label for="parent">Parent/GuardianSignature: </label>
+                            <input type="text">
+                            <label for="date">Date: </label>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Enviar">
+                </form>
+                <br>
+                <img src="images/hockey_1.jpg" alt="hockey 1" class="imagen">
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

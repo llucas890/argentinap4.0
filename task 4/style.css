@@ -39,7 +39,7 @@ h1 {
     list-style: none;
 }
 
-div>ul>li>a:hover {
+div>ul>li>a:hover ~ img {
     background-color: rgb(27, 27, 27);
     transition: 0.3s;
     color: whitesmoke;
@@ -69,6 +69,30 @@ div>ul>li>a {
 .center {
     text-align: center;
 }
+
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstform>label {
+    width: 100%;
+}
+
+.secondform {
+    width: 100%;
+}
+
+.thirdform {
+    width: 100%;
+}
+
+.fourthform {
+    width: 100%;
+}
+
+
 
 .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Montserrat, sans-serif;font-size:14px;
