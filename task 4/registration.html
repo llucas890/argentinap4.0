@@ -31,14 +31,13 @@
                 <h1>Mighty Ducks Hockey League</h1>
                 <form action="showdata.html" method="GET">
                     <fieldset>
-                        <legend align=center>Registration Form</legend>
+                        <legend>Registration Form</legend>
                         <div class="firstform">
 
                             <p><label for="name">Player's First Name: </label>
                                 <input type="text" name="name" id="name">
-                            </p>
 
-                            <p><label for="lastname">Last Name: </label>
+                                <label for="lastname">Last Name: </label>
                                 <input type="text" name="lastname" id="lastname">
                             </p>
                             <p>
@@ -48,64 +47,66 @@
                             <p>
                                 <label for="city">City: </label>
                                 <input type="text" name="city" id="city">
-                            </p>
-                            <p>
                                 <label for="zip">Zip Code: </label>
                                 <input type="text" name="zip" id="zip">
                             </p>
                             <p>
-                                <label for="birthdate">Birth Date(mm/dd/yyyy): </label>
-                                <input type="text" name="birthdate" id="birthdate">
-                            </p>
-                            <p><label for="gender">Gender: </label>
+                                <label for="birthdate">Birth Date(dd/mm/yyyy): </label>
+                                <input type="date" name="birthdate" id="birthdate">
+                                <label for="gender">Gender: </label>
                                 <span>Female
                                     <input type="checkbox" name="gender" id="gender" value="Female"></span>
                                 <span>Male
-                                    <input type="checkbox" name="gender" id="gender" value="Male"></span>
+                                    <input type="checkbox" name="gender" value="Male"></span>
                             </p>
                             <p><label for="grade">Grade: </label>
-                                <input type="checkbox" name="pre-school" id="grade">Pre-school</span>
-                                <input type="checkbox" name="1st" id="grade">1st</span>
-                                <input type="checkbox" name="2nd" id="grade">2nd</span>
-                                <input type="checkbox" name="3rd" id="grade">3rd</span>
-                                <input type="checkbox" name="4th" id="grade">4th</span>
-                                <input type="checkbox" name="5th" id="grade">5th</span>
+                                <span><input type="checkbox" name="pre-school" id="grade">Pre-school</span>
+                                <span><input type="checkbox" name="1st">1st</span>
+                                <span><input type="checkbox" name="2nd">2nd</span>
+                                <span><input type="checkbox" name="3rd">3rd</span>
+                                <span><input type="checkbox" name="4th">4th</span>
+                                <span><input type="checkbox" name="5th">5th</span>
                             </p>
                         </div>
                         <div class="secondform">
-                            <p>Which elementary school do you live near?</p>
-                            <label for="closest">
-                                <p>Closest School: </p>
-                            </label>
-                            <input type="checkbox" name="Aj Katzenmaier" id="closest">Aj Katzenmaier</span>
-                            <input type="checkbox" name="Marjorie P Hart" id="closest">Marjorie P Hart</span>
-                            <input type="checkbox" name="Greenbay" id="closest">Greenbay</span>
-                            <input type="checkbox" name="North Elementary" id="closest">North Elementary</span>
-                            <input type="checkbox" name="Howard A Yeager" id="closest">Howard A Yeager</span>
-                            <input type="checkbox" name="South Elementary" id="closest">South Elementary</span>
+                            <p><b>Which elementary school do you live near?</b></p>
+                            <p><b>Closest School: </b></p>
+                            <p><span><input type="checkbox" name="Aj Katzenmaier" id="closest">Aj Katzenmaier</span>
+                                <span><input type="checkbox" name="Marjorie P Hart">Marjorie P Hart</span>
+                            </p>
+                            <p><span><input type="checkbox" name="Greenbay">Greenbay</span>
+                                <span><input type="checkbox" name="North Elementary">North Elementary</span>
+                            </p>
+                            <p><span><input type="checkbox" name="Howard A Yeager">Howard A Yeager</span>
+                                <span><input type="checkbox" name="South Elementary">South Elementary</span>
+                            </p>
                         </div>
                         <div class="thirdform">
-                            <label for="position">
-                                <p>What position(s) do you normally play? (check all that apply)</p>
-                            </label>
-                            <input type="checkbox" name="Forward" id="position">Forward</span>
-                            <input type="checkbox" name="Midfield" id="position">Midfield</span>
-                            <input type="checkbox" name="Defense" id="position">Defense</span>
-                            <input type="checkbox" name="Goalkeeper" id="position">Goalkeeper</span>
 
-                            <label for="uniform">
-                                <p>Uniform Size: </p>
-                            </label>
-                            <input type="checkbox" name="Youth Small" id="uniform">Youth Small</span>
-                            <input type="checkbox" name="Medium" id="uniform">Medium</span>
-                            <input type="checkbox" name="Youth Medium" id="uniform">Youth Medium</span>
-                            <input type="checkbox" name="Large" id="uniform">Large</span>
-                            <input type="checkbox" name="Youth Large" id="uniform">Youth Large</span>
-                            <input type="checkbox" name="Extra-Large" id="uniform">Extra-Large</span>
-                            <input type="checkbox" name="Small" id="uniform">Small</span>
+                            <p> <b>What position(s) do you normally play? (check all that apply)</b></p>
+                            <p><span><input type="checkbox" name="Forward" id="position">Forward</span>
+                                <span><input type="checkbox" name="Midfield">Midfield</span>
+                            </p>
+                            <p><span><input type="checkbox" name="Defense">Defense</span>
+                                <span><input type="checkbox" name="Goalkeeper">Goalkeeper</span>
+                            </p>
                         </div>
+
                         <div class="fourthform">
-                            <p>Permission to Play</p>
+                            <p><b>Uniform Size:</b></p>
+                            <p><span><input type="checkbox" name="Youth Small" id="uniform">Youth Small</span>
+                                <span><input type="checkbox" name="Medium">Medium</span>
+                            </p>
+                            <p><span><input type="checkbox" name="Youth Medium">Youth Medium</span>
+                                <span><input type="checkbox" name="Large">Large</span>
+                            </p>
+                            <p><span><input type="checkbox" name="Youth Large">Youth Large</span>
+                                <span><input type="checkbox" name="Extra-Large">Extra-Large</span>
+                            </p>
+                            <span><input type="checkbox" name="Small">Small</span>
+                        </div>
+                        <div class="fifthform">
+                            <p><b>Permission to Play</b></p>
 
                             <p>I, the parent of guardian of the minor registrant, agree that the registrant and i will
                                 abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the
@@ -118,10 +119,14 @@
                                 activities, which transportation.
                             <p>By signing below, i here by agree and authorize the above. In addition, by signing below,
                                 also acknowledge that i have read the cancellation policy and agree to its terms.</p>
+
+                            <p><label id="parent">Parent/GuardianSignature: </label>
+                                <input type="text">
                             </p>
-                            <label for="parent">Parent/GuardianSignature: </label>
-                            <input type="text">
-                            <label for="date">Date: </label>
+                            <p>
+                                <label id="date">Date: </label>
+                                <input type="date">
+                            </p>
                         </div>
                     </fieldset>
                     <input type="submit" value="Enviar">

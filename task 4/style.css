@@ -46,8 +46,7 @@ div>ul>li>a:hover ~ img {
     border-radius: 5px 5px;
 }
 
-.imagen:hover {
-    transition: 0.3s;
+.imagen:active {
     width: 100%;
 }
 
@@ -70,29 +69,72 @@ div>ul>li>a {
     text-align: center;
 }
 
+legend {
+    margin-left:auto; 
+    margin-right:auto;
+}
 
 fieldset {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.firstform>label {
+fieldset div {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.firstform p{
+    padding: 5px;
+    margin: 10px 0;
     width: 100%;
 }
 
-.secondform {
+input {
+    margin-right: 5px;
+}
+
+.secondform p {
+    margin: 20px 0;
+    padding: 5px;
     width: 100%;
 }
 
-.thirdform {
+.thirdform p {
+    margin: 20px 0;
+    padding: 5px;
     width: 100%;
 }
 
-.fourthform {
+.fourthform p {
+    margin: 20px 0;
+    padding: 5px;
     width: 100%;
 }
 
+.fifthform p {
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+}
 
+span {
+    margin-left: 10px;
+}
+
+.mapas {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.mapas>div {
+    margin: 20px;
+}
 
 .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Montserrat, sans-serif;font-size:14px;
