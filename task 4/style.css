@@ -31,7 +31,7 @@ h1 {
 }
 .menu {
     display: flex;
-    background-color: rgb(160, 95, 95);
+    background-color: rgb(2, 11, 20);
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -135,6 +135,19 @@ span {
 .mapas>div {
     margin: 20px;
 }
+.checkbtn {
+    font-size: 30px;
+    color: rgb(46, 41, 41);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
 
 .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Montserrat, sans-serif;font-size:14px;
@@ -144,3 +157,52 @@ span {
 .tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
 .tg .tg-aw21{border-color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
 @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
+
+
+@media screen and (max-width: 1030px) {
+
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    .checkbtn {
+        position: fixed;
+        display: block;
+        right: 0px;
+    }
+    .menu {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+        line-height: 95px;
+        height: 100%;
+        width: 100%;
+    }
+    .menu li {
+        background: rgb(2, 11, 20);
+    }
+    
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ div ul{
+        left: 0;
+    }
+    .principal {
+        padding-top: 100px;
+    }
+    .imagen {
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+    }
+    fieldset {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    }
+}
