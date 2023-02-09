@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.size-home {
+    width: 100%;
+    height: auto;
+}
+
+.bg-red {
+    background-color: #FF1D1E;
+}
+
+.fw-bold {
+    font-family: 'Oswald', sans-serif;
+}
+
+.novedades-title {
+    margin-bottom: -2rem;
+    font-size: 7rem;
+    color: #fff;
+    font-weight: 600px;
+}
+
+.outline-title {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffff;
+
+}
