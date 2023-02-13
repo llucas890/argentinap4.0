@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+  
+main {
+    flex: 1;
+    /* min-height: 54.5vh; */
+}
+
+
+.nav-item {
+    margin: 0 5px;
+    text-align: center;
+    align-self: center;
+}
+
+.navbar-brand {
+    margin-left: 40px;
+}
+
+.pagination {
+    width: 100%;
+    justify-content: space-between;
+    background-color: grey;
+    margin-bottom: 50px;
+}
+.page-item .page-link {
+    padding: 30px;
+    font-size: 3rem;
+    border: 0;
+    background-color: grey;
+    color: rgb(22, 22, 22);
+}
+.category {
+    margin-bottom: 50px;
+}
+
+.catcheck {
+    padding: 0 5px;   
+}
+
+.cards {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer {
+    margin-top: 8vh;
+    background-color: grey;
+}
+div > a > i {
+    font-size: 30px;
+    margin: 0 20px;
+    background-color: black;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0.3em 0.6em;
+    padding: 0.3em 0.6em;
+    color: white;
+}
+
+.cohort {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
