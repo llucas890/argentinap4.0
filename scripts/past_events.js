@@ -1,11 +1,42 @@
 const currentDate = data.currentDate
 let events = data.events
 var cards = document.getElementById("cards");
+let fragment = document.createDocumentFragment()
 
-for (let index = 0; index < events.length; index++) {
+for (evento of events) {
+  if (evento.date <= currentDate) {
+    let content = document.createElement('div')
+    content.className = 'card'
 
-  if (events[index].date <= currentDate) {
-    cards.innerHTML += `<div class="card" style="width: 18rem;"><img src=${events[index].image} class="card-img-top cardimg" alt="..."><div class="card-body"><h5 class="card-title cardtitle">${events[index].name}</h5><p class="card-text cardtext">${events[index].description}</p><a href="#" class="btn btn-primary" id="btncard">Ver mas</a></div></div>`
+    let img = document.createElement('img')
+    img.src = evento.image
+    img.className = 'card-img-top cardimg'
+    img.alt = 'cartas eventos'
+    content.appendChild(img)
+
+    let cardBody = document.createElement('div')
+    cardBody.className = 'card-body'
+    content.appendChild(cardBody)
+
+    let cardTitle = document.createElement('h5')
+    cardTitle.className = 'card-title cardtitle'
+    cardTitle.textContent = evento.name
+    cardBody.appendChild(cardTitle)
+
+    let cardText = document.createElement('p')
+    cardText.className = 'card-text cardtext'
+    cardText.textContent = evento.description
+    cardBody.appendChild(cardText)
+
+    let btn = document.createElement('a')
+    btn.href = '#'
+    btn.className = 'btn btn-primary'
+    btn.id = 'btncard'
+    btn.textContent = 'Ver mas'
+    cardBody.appendChild(btn)
+
+    fragment.appendChild(content)
   }
-
 }
+
+cards.appendChild(fragment)
