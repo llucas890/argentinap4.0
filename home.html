@@ -68,19 +68,25 @@
 
   <!-- body -->
   <main>
-    <div class="container d-flex justify-content-between category">
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
+    <div class="container d-flex justify-content-between ">
+    <div class="category d-flex align-items-center" id="checkboxContainer">
+      <input type="checkbox" name="Category" value="Food Fair">Food Fair
+      <input type="checkbox" name="Category" value="Museum">Museum
+      <input type="checkbox" name="Category" value="Costume Party">Costume Party
+      <input type="checkbox" name="Category" value="Music Concert">Music Concert
+      <input type="checkbox" name="Category" value="Race">Race
+      <input type="checkbox" name="Category" value="Book Exchange">Book Exchange
+      <input type="checkbox" name="Category" value="Cinema">Cinema
+    </div>
+    <div class="search">
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="" aria-label="Search">
         <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div>
+  </div>
     <!-- comienzo cartas -->
-    <div class="container d-flex justify-content-between text-center flex-wrap" id="cards">
+    <div class="container d-flex justify-content-between text-center flex-wrap" id="cardsList">
     </div>
     <!-- fincartas  -->
   </main>

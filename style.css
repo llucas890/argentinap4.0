@@ -40,8 +40,12 @@ main {
     background-color: grey;
     color: rgb(22, 22, 22);
 }
-.category {
-    margin-bottom: 50px;
+
+.category>input{
+    margin: 0 10px;
+}
+
+.search {
 }
 
 .catcheck {
