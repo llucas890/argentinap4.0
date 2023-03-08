@@ -1,15 +1,17 @@
 let cards = document.getElementById("cardsList");
+let cardsDiv = cards.getElementsByTagName('div');
 let events = data.events;
-
-
-
 let fragment = document.createDocumentFragment();
+let card = cards.getElementsByClassName('card')
+
+
 
 function crearCards(arr) {
   cardsList.innerHTML = ''
-  arr.forEach(element => {
+  events.forEach(element => {
 
     let content = document.createElement('div')
+    content.id = element._id
     content.className = 'card'
 
     let img = document.createElement('img')
@@ -39,20 +41,24 @@ function crearCards(arr) {
     btn.textContent = 'Ver mas'
     cardBody.appendChild(btn)
 
+    let cardCategory = document.createElement('span')
+    cardCategory.textContent = element.category
+    cardCategory.className = element.category
+    cardCategory.style.display = 'none'
+    content.appendChild(cardCategory)
+
     fragment.appendChild(content)
 
   });
-  cardsList.appendChild(fragment);
+  cards.appendChild(fragment);
 }
 
+crearCards()
 
 // filtrar cartas por searchinput
 
-// Obtiene la lista de cartas
-var cardList = document.getElementById("cardsList");
-
 // Obtiene todos los elementos de la lista de cartas
-var cardsDiv = cardList.getElementsByTagName('div')
+
 
 function filterCards() {
   // Obtiene el valor del input de búsqueda
@@ -73,53 +79,45 @@ function filterCards() {
 var searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", filterCards);
 
-
-// filtrar cartas por checkbox 
-
-// Obtiene la lista de checkbox
-let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-let checkboxesSeleccionados = [];
-
-checkboxes.forEach(item => item.addEventListener('change', inputSelected));
-
-function inputSelected(e) {
-  if (e.target.checked) {
-    checkboxesSeleccionados.push(e.target.value)
-    filterCardsCheckbox(events, checkboxesSeleccionados)
+const checkboxContainer = document.getElementById("checkboxContainer");
+let categorias = []
+events.forEach(e => {
+  if (!categorias.includes(e.category)) {
+    categorias.push(e.category)
   }
-  else {
-    let borrarElementos = checkboxesSeleccionados.filter(item => item !== e.target.value)
-    checkboxesSeleccionados = borrarElementos
-    filterCardsCheckbox(events, checkboxesSeleccionados)
-  }
-}
+})
 
-crearCards(events)
+categorias.forEach((categoria) => {
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.value = categoria;
+  checkbox.textContent = categoria;
+  checkboxContainer.appendChild(checkbox);
+
+  let div = document.createElement('div')
+  div.textContent = categoria
+  checkboxContainer.appendChild(div)
+});
 
 
-function filterCardsCheckbox(arr, arrInputs) {
-  if (arrInputs.length === 0) {
-    crearCards(events)
-  }
-  else {
-    arr.forEach(element => {
-      for (let input of arrInputs) {
-        if (input == element.category) {
-          if (coincidenciasArray) {
-            coincidenciasArray.push(element)
-          }
-        }
-        else {
-          // let borrarElementos = coincidenciasArray.filter(item => item !== element)
-          // coincidenciasArray = borrarElementos
-        }
+function actualizarCartas() {
+  const categoriasSeleccionadas = Array.from(checkboxContainer.querySelectorAll("input:checked")).map((checkbox) => checkbox.value);
+
+    for (let i = 0; i < card.length; i++) {
+      if (categoriasSeleccionadas.length == 0 ) {
+        crearCards()
       }
-    });
-    // crearCards(coincidenciasArray)
-    console.log(coincidenciasArray);
-  }
-  
+      if (categoriasSeleccionadas.includes(events[i].category)) {
+        card[i].style.display = "block";
+      } else {
+        card[i].style.display = "none";
+      }
+    }
+
+
 }
 
-let coincidenciasArray = []
+
+checkboxContainer.querySelectorAll("input").forEach((checkbox) => {
+  checkbox.addEventListener("click", actualizarCartas);
+});
