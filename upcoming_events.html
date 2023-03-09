@@ -69,19 +69,18 @@
 
   <!-- body -->
   <main>
-    <div class="container d-flex justify-content-between category">
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <input type="checkbox" name="Category">Category
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-      </form>
+    <div class="container d-flex justify-content-between ">
+      <div class="category d-flex align-items-center" id="checkboxContainer">
+      </div>
+      <div class="search">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" id="searchInput" type="search" placeholder="" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
     </div>
     <!-- comienzo cartas -->
-    <div class="container d-flex justify-content-between text-center flex-wrap" id="cards">
+    <div class="container d-flex justify-content-around text-center flex-wrap" id="cardsList">
     </div>
   </main>
   <!-- fin body -->
