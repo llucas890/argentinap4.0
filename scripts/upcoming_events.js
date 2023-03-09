@@ -104,9 +104,6 @@ function actualizarCartas() {
     if (categoriasSeleccionadas.length == 0) {
       crearCards()
     }
-    if (card[i].style.display == "none" && card[i].style.display == 0) {
-      console.log('hola');
-    }
     if (categoriasSeleccionadas.includes(events[i].category)) {
       card[i].style.display = "block";
     } else {
