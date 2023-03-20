@@ -100,6 +100,7 @@ categorias.forEach((categoria) => {
 
 function actualizarCartas() {
   const categoriasSeleccionadas = Array.from(checkboxContainer.querySelectorAll("input:checked")).map((checkbox) => checkbox.value);
+
   for (let i = 0; i < card.length; i++) {
     if (categoriasSeleccionadas.length == 0) {
       crearCards()
