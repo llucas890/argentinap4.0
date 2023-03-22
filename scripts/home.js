@@ -1,14 +1,29 @@
 let cards = document.getElementById("cardsList");
 let cardsDiv = cards.getElementsByTagName('div');
-let events = data.events;
 let fragment = document.createDocumentFragment();
-let card = cards.getElementsByClassName('card')
+let card = cards.getElementsByClassName('card');
+let urlApi = 'https://mindhub-xj03.onrender.com/api/amazing';
+
+async function getData() {
+  try {
+    const response = await fetch(urlApi);
+    const dataApi = await response.json();
+    arrayData = dataApi.events;
+    crearCards(arrayData)
+    agregarCategorias(arrayData)
+    crearCategorias()
+  }
+  catch(error) {
+    console.log(error);
+  }
+}
+
+getData()
 
 
-
-function crearCards(arr) {
+async function crearCards(arr) {
   cardsList.innerHTML = ''
-  events.forEach(element => {
+    arr.forEach(element => {
 
     let content = document.createElement('div')
     content.id = element._id
@@ -53,8 +68,6 @@ function crearCards(arr) {
   cards.appendChild(fragment);
 }
 
-crearCards()
-
 // filtrar cartas por searchinput
 
 // Obtiene todos los elementos de la lista de cartas
@@ -81,12 +94,16 @@ searchInput.addEventListener("input", filterCards);
 
 const checkboxContainer = document.getElementById("checkboxContainer");
 let categorias = []
-events.forEach(e => {
+
+function agregarCategorias(arr) {
+arr.forEach(e => {
   if (!categorias.includes(e.category)) {
     categorias.push(e.category)
   }
 })
+}
 
+function crearCategorias() {
 categorias.forEach((categoria) => {
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
@@ -98,6 +115,7 @@ categorias.forEach((categoria) => {
   div.textContent = categoria
   checkboxContainer.appendChild(div)
 });
+}
 
 
 function actualizarCartas() {
